@@ -1,0 +1,116 @@
+.table-wrapper {
+  padding-bottom: 20px;
+  margin-top: 100px;
+  .container-fluid {
+    background-color: var(--white-color);
+  }
+  .dt-container {
+    .dt-layout-cell {
+      &.dt-start {
+        display: none;
+      }
+    }
+
+    &.dt-empty-footer {
+      .dt-scroll-body {
+        border: 0px;
+      }
+    }
+  }
+  .section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    max-width: 100%;
+    .table_search {
+        border: 1px solid #DADADA;
+        border-radius: 6px;
+        max-width: 40%;
+        .input-group-text {
+            background-color: transparent;
+            padding: 10px;
+            border: none;
+        }
+        .form-control {
+            box-shadow: none;
+            outline: none;
+            border: none;
+            padding: 10px;
+            padding-left: 0;
+        }
+    }
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #2042b6;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e5f1f3;
+  }
+
+  .dt-input {
+    outline: none;
+    box-shadow: none;
+  }
+
+  table {
+    &.dataTable {
+      &.display {
+        > tbody > tr > * {
+          border: 0px;
+        }
+        > tbody > tr:nth-child(odd) > * {
+          box-shadow: inset 0 0 0 9999px #f3f3f3;
+          border-radius: 6px;
+        }
+      }
+
+      > thead > tr > th {
+        border: 0px;
+      }
+
+      &.stripe {
+        > tbody > tr:nth-child(odd) > * {
+          box-shadow: inset 0 0 0 9999px #f3f3f3;
+        }
+      }
+    }
+  }
+
+  .button-group {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    .default-btn.style2 {
+      box-shadow: 0px 16px 48px #000000a1;
+    }
+  }
+
+  @include mobile {
+    .section-heading {
+      flex-wrap: wrap;
+      margin-bottom: 0;
+      .table_search {
+        max-width: 100%;
+      }
+    }
+  }
+}

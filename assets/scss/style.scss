@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #eeeeee;
+}
+
+@font-face {
+  font-family: "Nantes";
+  src: local("Nantes Regular"), local("Nantes-Regular"),
+    url("../fonts/Nantes-Regular.woff2") format("woff2"),
+    url("../fonts/Nantes-Regular.woff") format("woff"),
+    url("../fonts/Nantes-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Messina Sans";
+  src: local("Messina Sans Regular"), local("Messina-Sans-Regular"),
+    url("../fonts/MessinaSans-Regular.ttf") format("woff2"),
+    url("../fonts/MessinaSans-Regular.woff") format("woff"),
+    url("../fonts/MessinaSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --primary-font: "Nantes";
+  --secondary-font: "Messina Sans";
+  --primary-color: #2042b6;
+  --dark-color: #191618;
+  --whiteShade-color: #ededed;
+  --white-color: #ffffff;
+  --black-color: #000000;
+}
+
+// Responsive
+@import "mixins";
+// Default Components
+@import "components/_default";
+@import "components/_section-header";
+// Body Content
+@import "components/_header";
+@import "components/_hero";
+@import "components/_chart-area";
+@import "components/_datatables";
+@import "components/_listing";
+@import "components/_stateWrapper";
+@import "components/_idea";
+@import "components/_about";
+@import "components/_companiesLogo";
+@import "components/_footer";

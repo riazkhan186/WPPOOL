@@ -1,0 +1,65 @@
+@import "../mixins.scss";
+
+.companies-portfolio {
+    .companies-logo-card-area {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+             display: grid;
+             gap: 20px;
+             grid-template-columns: repeat(5, 1fr);
+             
+             li {
+                min-width: 220px;
+                height: 120px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--white-color);
+                transition: .5s ease-in-out;
+                border-radius: 6px;
+                padding: 0px 20px;
+                img {
+                    width: 100%;
+                }
+                &:hover {
+                    filter: invert(1);
+                }
+             }
+        }
+
+        @include desktop {
+            ul {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        @include laptop {
+            ul {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @include tablet {
+            ul {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @include mobile {
+            ul {
+                grid-template-columns: repeat(2, 1fr);
+                li {
+                    min-width: unset;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .companies-portfolio  {
+        .section-heading {
+            margin-bottom: 20px;
+        }
+    }
+
+}

@@ -1,0 +1,27 @@
+// _mixins.scss
+
+// Media Query
+@mixin desktop {
+    @media (min-width: 992px) and (max-width: 1200px) {
+      @content;
+    }
+  }
+  
+  @mixin laptop {
+    @media (min-width: 769px) and (max-width: 991px) {
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media (min-width: 575px) and (max-width: 768px) {
+      @content;
+    }
+  }
+  
+  @mixin mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  

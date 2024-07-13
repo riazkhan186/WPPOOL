@@ -1,0 +1,121 @@
+@import "../mixins.scss";
+
+.about-wrapper {
+    .about-inner-wrapper {
+        background-color: var(--white-color);
+        border-radius: 12px;
+        .about__text-area {
+            padding-left: 70px;
+            h3 {
+                line-height: 1.2;
+                margin-bottom: 0px;
+                font: {
+                    size: 48px;
+                    weight: 400;
+                };
+            }
+            h5 {
+                line-height: 1.2;
+                margin-bottom: 10px;
+                color: #7D7F81;
+                font: {
+                    size: 30px;
+                    weight: 400;
+                };
+            }
+            p {
+                max-width: 622px;
+                color: #191618;
+                a {
+                    color: #191618;
+                    border-bottom: 1px solid #000;
+                    text-decoration: none;
+                }
+            }
+            .default-btn {
+                margin-top: 15px;
+                display: inline-block;
+                text-decoration: none;
+            }
+        }
+
+        .about__img-area {
+            img {
+                width: 100%;
+            }
+        }
+
+        @include desktop {
+            padding: {
+                top: 50px;
+                bottom: 50px;
+            };
+            .about__text-area {
+                padding-left: 20px;
+                margin-bottom: 0px;
+                h3 {
+                    font-size: 36px;
+                    margin-bottom: 10px;
+                }
+                h5 {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        @include laptop {
+            padding-top: 50px;
+            .about__text-area {
+                padding-left: 20px;
+                margin-bottom: 30px;
+                h3 {
+                    font-size: 36px;
+                    margin-bottom: 10px;
+                }
+                h5 {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+            }
+            .about__img-area {
+                text-align: center;
+                img {
+                    width: 50%;
+                }
+            }
+        }
+
+        @include tablet {
+            padding-top: 50px;
+            .about__text-area {
+                padding-left: 20px;
+                margin-bottom: 30px;
+                h3 {
+                    font-size: 36px;
+                    margin-bottom: 10px;
+                }
+                h5 {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        @include mobile {
+            padding-top: 50px;
+            .about__text-area {
+                padding-left: 0;
+                margin-bottom: 30px;
+                h3 {
+                    font-size: 26px;
+                    margin-bottom: 10px;
+                }
+                h5 {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

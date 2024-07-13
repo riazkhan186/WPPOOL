@@ -1,0 +1,157 @@
+@import "../mixins.scss";
+.header-wrapper {
+  background-color: var(--primary-color);
+  position: relative;
+  padding: 30px 25px;
+  .container-fluid {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-wrapper {
+    .logo {
+      .white-logo {
+        display: block;
+      }
+      .black-logo {
+        display: none;
+      }
+    }
+  }
+
+  .header-right-area {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 15px;
+  }
+
+  .header-share-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-menu-btn {
+    background-color: transparent;
+    border: none;
+    .default-btn {
+      color: #ffffff;
+    }
+  }
+
+  &.sticky {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0 0 10px #eeeeee;
+    background-color: var(--white-color);
+    padding: {
+      top: 16px;
+      bottom: 16px;
+    }
+    .logo-wrapper {
+      .logo {
+        .white-logo {
+          display: none;
+        }
+        .black-logo {
+          display: block;
+        }
+      }
+    }
+    .header-right-area {
+      .header-share-btn,
+      .default-btn,
+      .header-menu-area .header-menu-btn {
+        filter: invert(1);
+      }
+    }
+
+  }
+
+  .menu-popup {
+    width: 338px;
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px #aaaaaa50;
+    border-radius: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 9999;
+
+    .menu-popup-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .header-share-btn {
+        background-color: #afcd80;
+        color: #ffffff;
+        border: none;
+
+      }
+
+      .default-btn {
+        background-color: var(--primary-color);
+        color: #ffffff;
+      }
+
+      .menu-popup-close-btn {
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+      }
+    }
+
+    .menu-list {
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+      li {
+        a {
+          margin-bottom: 20px;
+          display: inline-block;
+          color: #191618;
+          text-decoration: none;
+          font: {
+            size: 18px;
+            weight: 400;
+          }
+        }
+      }
+    }
+
+    .visit-btn {
+      font-size: 21px;
+      font-weight: 400;
+      color: var(--primary-color);
+      font-family: var(--primary-font);
+      text-decoration: none;
+      margin-top: 12px;
+      display: inline-block;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  @include mobile {
+    padding: 20px 0px;
+    .header-right-area {
+      .header-share-btn,
+      .default-btn {
+        display: none;
+      }
+    }
+  }
+}

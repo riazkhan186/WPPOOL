@@ -1,0 +1,31 @@
+.section-heading {
+    max-width: 880px;
+    .section-title {
+        line-height: 1.2;
+        margin-bottom: 18px;
+        color: var(--dark-color);
+        font: {
+            size: 48px;
+            weight: 400;
+            family: var(--primary-font)
+        };
+    }
+    .section-subtitle {
+        font: {
+            size: 16px;
+            weight: 350;
+            family: var(--secondary-font);
+        };
+    }
+    @include tablet {
+        .section-title {
+            font-size: 36px;
+        }
+    }
+    @include mobile {
+        .section-title {
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+    }
+}
